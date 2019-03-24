@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css"/>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.13&key=43e5043ce425d953363f12a04b7444d0"></script>
+
+<div id="container"></div>
+<script type="text/javascript">
+    //初始化地图对象，加载地图
+    var map = new AMap.Map("container", {
+        resizeEnable: true,
+        center: [113.397739,23.122888],
+        zoom: 18 //地图显示的缩放级别
+    });
+    //添加点标记，并使用自己的icon
+    new AMap.Marker({
+        map: map,
+        position: [113.397739,23.122888],
+        icon: new AMap.Icon({
+            size: new AMap.Size(36, 47),  //图标大小
+            image: "/images/contact/icon_map.png",
+            imageOffset: new AMap.Pixel(0, 0)
+        })
+    });
+    //map.setLang("zh_en");
+</script>
